@@ -13,8 +13,8 @@ The repository contains an Android native application that listens to user locat
 - Turn on location otherwise app will not function properly
 # Technologies and Libraries used
 - Retrofit for network requests
-- Room for offline persitence (data caching)
-- Dagger for dependency injection (the D in SOLID)
+- Room for offline persitence
+- Dagger for dependency injection
 - LiveData for implementing an observer pattern
 - Google Play Services for Live location updates
 - OKhttp3 for network requests
