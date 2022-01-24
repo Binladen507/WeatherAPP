@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/today_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_rainy"
+    tools:context=".WeatherApp.ui.main.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="ScrollViewCount">
+
+        <!--Main content-->
+        <RelativeLayout
+            android:id="@+id/today_weather_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Left aligned content-->
+
+            <TextView
+                android:id="@+id/time_since_last_update"
+                style="@style/bodyTextStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:shadowColor="@color/white"
+                android:text="March 14, 12:05"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/day_of_week"
+                style="@style/bodyTextStyle"
+                android:layout_below="@id/time_since_last_update"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Sunday" />
+
+            <!--Max and min temperatures-->
+            <TextView
+                android:id="@+id/temp_min_max"
+                style="@style/bodyTextStyle"
+                android:layout_below="@id/day_of_week"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/max_min_paceholder" />
+
+            <!--Current temperature-->
+            <TextView
+                android:id="@+id/current_temp"
+                style="@style/bodyTextStyle"
+                android:layout_below="@id/temp_min_max"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="25\u00B0"
+                android:textSize="72sp" />
+
+            <TextView
+                android:id="@+id/feels_like"
+                style="@style/bodyTextStyle"
+                android:layout_below="@id/current_temp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Feels like 25\u00B0" />
+
+            <!--Right aligned content-->
+
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/temp_min_max"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mostly_cloudy_day_light_color_96dp" />
+
+            <!--Weather condition description-->
+            <TextView
+                android:id="@+id/weather_description"
+                style="@style/bodyTextStyle"
+                android:layout_width="100dp"
+                android:layout_below="@id/current_temp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Mostly cloudy"
+                android:textAlignment="center"
+                android:textDirection="rtl" />
+
+            <!--For saving a weather location as favourite-->
+            <Button
+                android:id="@+id/save_location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_description"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Save"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

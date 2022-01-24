@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:contentPaddingBottom="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/date_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Date"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/weather_condition_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_forecast"
+            android:layout_marginStart="16dp"
+            android:text="Mostly cloudy" />
+
+        <TextView
+            android:id="@+id/temp_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/comfortaa_medium"
+            android:text="25\u00B0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/min_temp_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp_forecast"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:text="15\u00B0"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/weather_icon_forecast"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/temp_forecast"
+            android:scaleType="fitCenter"
+            android:src="@drawable/strong_tstorms_light_color_96dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/weather_icon_forecast"
+            android:layout_marginTop="8dp"
+            android:background="#e6e6e6" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
